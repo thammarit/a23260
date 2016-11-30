@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main_page"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whiteSmoke"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.egco428.a23260.MainPageActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/toolbarColor"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_nameM"
+            android:layout_gravity="center"
+            android:id="@+id/title_toolbar2"
+            android:textSize="19sp"
+            android:textColor="@android:color/black"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/backButton1"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/ic_keyboard_arrow_left_black_24dp"
+            android:background="@android:color/transparent"
+            android:onClick="backDialogToLogin"
+            tools:ignore="ContentDescription"/>
+    </android.support.v7.widget.Toolbar>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/egco_logo"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:src="@drawable/egco"
+        app:civ_border_width="1dp"
+        app:civ_border_color="#FFFFFF"
+        android:layout_marginTop="19dp"
+        android:layout_below="@+id/my_toolbar2"
+        android:layout_centerHorizontal="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:layout_marginTop="29dp"
+        android:background="@color/box_grey"
+        android:layout_below="@+id/egco_logo"
+        android:layout_alignParentStart="true"
+        android:gravity="center"
+        android:id="@+id/linearLayout12">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/userList_mainPage"
+            android:textSize="19sp"
+            android:text="@string/userlist_text"
+            android:gravity="center"
+            android:textColor="@android:color/holo_blue_dark"/>
+    </LinearLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/linearLayout12"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/userList_listView" />
+
+</RelativeLayout>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whiteSmoke"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.egco428.a23260.LoginActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/toolbarColor"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_nameA"
+            android:layout_gravity="center"
+            android:id="@+id/title_toolbar"
+            android:textSize="19sp"
+            android:textColor="@android:color/black"/>
+        </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="35dp"
+        android:id="@+id/linear_layout2"
+        android:layout_marginTop="21dp"
+        android:layout_gravity="center"
+        android:gravity="center_vertical"
+        android:background="@drawable/rounded_rectangle_edittext"
+        android:layout_below="@+id/linear_layout1"
+        android:layout_alignStart="@+id/linear_layout1">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/username_edittext"
+            android:textSize="18sp"
+            android:hint="@string/username_text"
+            android:layout_marginStart="12dp"
+            android:textColor="@android:color/black"
+            android:background="@android:color/transparent"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="35dp"
+        android:id="@+id/linear_layout4"
+        android:layout_marginTop="21dp"
+        android:layout_gravity="center"
+        android:gravity="center_vertical"
+        android:background="@drawable/rounded_rectangle_edittext"
+        android:layout_below="@+id/linear_layout3"
+        android:layout_alignStart="@+id/linear_layout3">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/password_edittext"
+            android:inputType="textPassword"
+            android:textSize="18sp"
+            android:hint="@string/password_text"
+            android:layout_marginStart="12dp"
+            android:textColor="@android:color/black"
+            android:background="@android:color/transparent"/>
+    </LinearLayout>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+    android:id="@+id/egco_logo"
+    android:layout_width="110dp"
+    android:layout_height="110dp"
+    android:src="@drawable/egco"
+    app:civ_border_width="1dp"
+    app:civ_border_color="#FFFFFF"
+    android:layout_marginTop="19dp"
+    android:layout_below="@+id/my_toolbar"
+    android:layout_centerHorizontal="true" />
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="35dp"
+        android:id="@+id/linear_layout3"
+        android:layout_marginTop="41dp"
+        android:layout_gravity="center"
+        android:gravity="center_vertical"
+        android:background="@drawable/rounded_rectangle_text"
+        android:layout_below="@+id/linear_layout2"
+        android:layout_alignStart="@+id/linear_layout2">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/password_text"
+        android:textSize="18sp"
+        android:text="@string/password_text"
+        android:gravity="center"
+        android:textColor="@android:color/holo_blue_dark" />
+    </LinearLayout>
+
+    <Button
+        android:layout_width="135dp"
+        android:layout_height="35dp"
+        android:id="@+id/cancel_button"
+        android:text="@string/cancel_text"
+        android:background="@drawable/rounded_button_blue"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"
+        android:textAllCaps="false"
+        android:layout_alignTop="@+id/signin_button"
+        android:layout_alignEnd="@+id/linear_layout4"
+        android:onClick="clearText" />
+
+    <Button
+        android:layout_width="135dp"
+        android:layout_height="35dp"
+        android:id="@+id/signup_button"
+        android:text="@string/signup_text"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="35dp"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/rounded_button_blue"
+        android:textAllCaps="false"
+        android:onClick="toSignupActivity" />
+
+    <Button
+        android:layout_width="135dp"
+        android:layout_height="35dp"
+        android:id="@+id/signin_button"
+        android:text="@string/signin_text"
+        android:background="@drawable/rounded_button_blue"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"
+        android:layout_above="@+id/signup_button"
+        android:layout_alignStart="@+id/linear_layout4"
+        android:layout_marginBottom="36dp"
+        android:onClick="signIntoMain" />
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="35dp"
+        android:id="@+id/linear_layout1"
+        android:layout_marginTop="24dp"
+        android:layout_gravity="center"
+        android:gravity="center_vertical"
+        android:background="@drawable/rounded_rectangle_text"
+        android:layout_below="@+id/egco_logo"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/username_text"
+            android:textSize="18sp"
+            android:text="@string/username_text"
+            android:gravity="center"
+            android:textColor="@android:color/holo_blue_dark"/>
+    </LinearLayout>
+
+</RelativeLayout>

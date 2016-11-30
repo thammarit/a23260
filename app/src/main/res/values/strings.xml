@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">a23260</string>
+    <string name="title_nameA">Log-in Page</string>
+    <string name="title_nameM">Main Page</string>
+    <string name="title_nameL">Location</string>
+    <string name="title_nameS">Sign-up Page</string>
+    <string name="username_text">Username</string>
+    <string name="password_text">Password</string>
+    <string name="signin_text">Sign-in</string>
+    <string name="signup_text">Sign-up</string>
+    <string name="cancel_text">Cancel</string>
+    <string name="latitude_text">Latitude</string>
+    <string name="longtitude_text">Longtitude</string>
+    <string name="random_text">Random by Clicking</string>
+    <string name="adduser_text">Add New User</string>
+    <string name="userlist_text">List of Usernames</string>
+    <string name="title_activity_location">Map</string>
+
+</resources>
